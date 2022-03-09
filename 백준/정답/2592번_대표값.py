@@ -22,8 +22,8 @@ print(sum(a)//10)
 
 
 from collections import Counter
-# print(  Counter(a).most_common()  )
-# print(Counter(a).most_common()[0])
+print(  Counter(a).most_common()  )
+print(Counter(a).most_common()[0])
 print(Counter(a).most_common()[0][0])
 
 
