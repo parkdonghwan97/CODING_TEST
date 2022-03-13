@@ -29,5 +29,5 @@ for i in range(n):
             print(hq.heappop(heap))
     
     else:
-        hq.heappush(heap, -x)
+        hq.heappush(heap, x)
 
