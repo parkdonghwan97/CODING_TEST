@@ -7,42 +7,29 @@
 # input = sys.stdin.readline       # 입력 량이 많을 때 사용. 
 # s = intput().rstirp();
 
-
-
-
-import sys
-
-
 def DFS(L,sum):
-    
-    if L == n  and sum ==f : # 종료지점
+    if L == n and sum == f :# 답찾은경우
         print(*permu)
-        sys.exit()
-    
+
     else:
+        for i in range(1,n+1) : # 1부터 n까지
+            
+            if check[i] == 0 : 
+                check[i] = 1
+                permu[L] = i 
 
-        for i in range(1, n+1): # 1부터 n까지
-            if check[i] == 0:
-
-                check[i] = 1 #  체크 1 
-                permu[L] = i               # b = [1 3 3 1 ]
-                                           # p = [ 1 2 3 4]  각 원소 값 곱함
-                DFS(L+1, sum + (permu[L]*b[L]))
+                DFS(L+1, sum + permu[L] * bi[L] ) # sum에 permu * binary 값 더함
                 check[i] = 0
 
 
 
-n , f = map(int,input().split())
-permu = [0] * n  # 순열 담을 변수
-b = [1] * n      # 이항계수 저장      양 끝값은 1이기때문에 1로 초기화
-check= [0] *(n+1) #순열만들때 중복방지용 체크 
 
-for i in range(1,n):
+n, f = map(int,input().split())
 
-    # ex) b = [1 1 1 1 ]   n이 4일때
-    #      3C0 3C1 3C2 3C3 
-    #    1x1 1x3  1x3  1x1   = [ 1 3 3 1 ]
-    b[i] = (b[i-1] * (n-i)) //  i
+permu = [0] * n 
+bi = [1] * n   # 이항계수 처음과 마지막항은 1이기 떄문에 1로 초기화
+check = [0] *(n+1)
+for i in range(1,n) :  # 1부터 n-1 까지 이항계수 구하면 되니까
+    bi[i] = (bi[i-1] * (n-1))//i 
 
-# print(*b)
 DFS(0,0)
