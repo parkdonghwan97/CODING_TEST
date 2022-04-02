@@ -33,7 +33,7 @@ def DFS(x,y):
 
 board  =  [ list(map(int,input().split())) for i in range(7)  ]
 # 이제 이런문제 풀 때는, 12 시 3시 6시 9시 방향 기준으로 하자.
-dx = [0,1,0,-1]
+dx = [0,1,0,-1] 
 dy = [-1,0,1,0]
 cnt = 0 
 
