@@ -1,6 +1,6 @@
 
 
-#   
+# IV 1297번_TV크기
 # import math
 # # 대각선, 높이비율 , 너비비율  
 # D,H,W = map(int,input().split())
