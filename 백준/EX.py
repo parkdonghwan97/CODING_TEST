@@ -1,27 +1,25 @@
 
 
-#   
-# import math
-# # 대각선, 높이비율 , 너비비율  
-# D,H,W = map(int,input().split())
-
-# # 16: 9 
-# tmp = D / (H+W)
-# DD = D **2
-
-# op = DD/ (H**2 + W**2)
-
-# m = math.sqrt(op)
+# III 5618번_ 공약수
 
 
-# # 출력
-# # 높이 너비
+from math import gcd
+n = int(input())
 
-# # 내림모듈 floor
-# print( math.floor(m * H)  , math.floor(m*W))
+if n ==2:
+    a,b = map(int,input().split())
+    gcd1 = gcd(a,b)
+    x= 1
+    for i in range(gcd1):
+        if i % x == 0 :
+            print(x)
+        else:
+            x+=1
+        
 
-# # 다른사람 코드   
-d,a,b=map(int,input().split())
-r = ((d**2)/((a**2+b**2)))**0.5
-print(int(r*a), int(r*b))
 
+else:
+    a,b,c = map(int,input().split())
+    
+    gcd1 = gcd(a,b)
+    gcd2 = gcd(b,c)
