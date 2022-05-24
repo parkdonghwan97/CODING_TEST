@@ -1,37 +1,9 @@
 
 
-# II 1333번_부재중 전화
+# V 체스판 다시 칠하기
 
-# N 곡 L 길이 D 전화벨   노래와 노래 사이에 1초 
+n,m = map(int,input().split())
 
-n,l,d = map(int,input().split())
-
-# N * L -> 노래길이    (N-1)*5 조용한 구간   전화벨은D초에 1번씩 울림 1초동안 
-call = 0 
-songs = []
 for i in range(n):
-    for j in range(l):
-        songs.append(1)
-    for j in range(5):
-        songs.append(0) 
-while 1:
-    if call >= len(songs):
-        break
-    if songs[call] == 0:
-        break 
-    else:
-        call+=d
-print(call)
-
-
-# 다른 사람 코드  
-    
-N ,L, D = map(int, input().split())
-
-t = 0
-while t < N * (L + 5):
-    if t % (L + 5) >= L:
-         break
-    t += D
-print(t)
-
+    a = list(input())
+print(a)
