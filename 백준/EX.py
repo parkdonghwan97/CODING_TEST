@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # V 1094번_막대기
 
 
@@ -48,6 +49,10 @@ print(cnt)
 =======
 # III 1235번_학생 번호
 
+=======
+# III 1235번_학생 번호
+
+>>>>>>> 45ff7935f7232fd35484da893661c1ab52afa4e6
 n=int(input())
 a = []
 for i in range(n):
@@ -55,5 +60,9 @@ for i in range(n):
 
 
 for i in range(1, len(a)[0]+1):
+<<<<<<< HEAD
+    print(i)
+>>>>>>> 45ff7935f7232fd35484da893661c1ab52afa4e6
+=======
     print(i)
 >>>>>>> 45ff7935f7232fd35484da893661c1ab52afa4e6
