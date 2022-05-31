@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 # V 1094번_막대기
 
 
@@ -44,3 +45,15 @@ print(cnt)
 #         x = x-bar[i]
 # print(cnt)
     
+=======
+# III 1235번_학생 번호
+
+n=int(input())
+a = []
+for i in range(n):
+    a.append((input()))
+
+
+for i in range(1, len(a)[0]+1):
+    print(i)
+>>>>>>> 45ff7935f7232fd35484da893661c1ab52afa4e6
